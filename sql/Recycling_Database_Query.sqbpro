@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="C:/Users/nkemj/Downloads/portfolio_github_package/portfolio/02-plastic-recycling-canada/Recycling_Database_Query.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser query pragmas" current="2"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="1272"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><table title="plastics_model_clean" custom_title="0" dock_id="1" table="4,20:mainplastics_model_clean"/><dock_state state="000000ff00000000fd0000000100000002000004f40000021efc0100000001fb000000160064006f0063006b00420072006f00770073006500310100000000000004f40000011e00ffffff000002580000000000000004000000040000000800000008fc00000000"/><default_encoding codec=""/><browse_table_settings><table schema="main" name="plastics_model_clean" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort/><column_widths><column index="1" value="39"/><column index="2" value="300"/><column index="3" value="70"/><column index="4" value="124"/><column index="5" value="70"/><column index="6" value="85"/><column index="7" value="145"/><column index="8" value="190"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table></browse_table_settings></tab_browse><tab_sql><sql name="Plastic Diversion Trend*">-- Is canada on track for 2030?--
+SELECT year,
+       ROUND(SUM(tonnes),0) AS plastics_diverted_t
+FROM plastics_model_clean
+WHERE source = 'All'
+GROUP BY year
+ORDER BY year;</sql><sql name="Concentration by Province*">-- what is the concentration by provinces for each of these plastics?--
+SELECT geography, ROUND(tonnes,0) AS tonnes,
+       ROUND(100.0*tonnes/SUM(tonnes) OVER (),1) AS pct_of_national
+FROM plastics_model_clean
+WHERE source='All' AND year=2022
+ORDER BY tonnes DESC;</sql><sql name="Per capita Ranking 2022*">--comparing the number of tonnes of plastic generated regionally vs per person--
+SELECT geography, ROUND(tonnes,0) AS tonnes, ROUND(diverted_kg_per_person,1) AS kg_per_person
+FROM plastics_model_clean 
+WHERE source='All' AND year=2022
+AND diverted_kg_per_person IS NOT NULL
+ORDER BY kg_per_person DESC;</sql><sql name="Residential vs non-residential*">--What is the proportion of residential vs non- residential waste?--
+SELECT source, ROUND(SUM(tonnes),0) AS tonnes
+FROM plastics_model_clean
+WHERE year=2022 AND source IN ('Residential','Non-residential')
+GROUP BY source;</sql><sql name="Total waste vs Plastic per capita*">--What is the total waste diversion rate (2020) vs plastic per capita?-- 
+SELECT geography, ROUND(diverted_kg_per_person,1) AS plastic_kg_pp,
+       ROUND(totalwaste_diversion_rate_2020,3) AS totalwaste_rate
+FROM plastics_model_clean
+WHERE source='All' AND year=2020 
+AND diverted_kg_per_person IS NOT NULL
+ORDER BY totalwaste_rate DESC;</sql><sql name="SQL 6*">--Which provinces showed signs of improvement in the plastic waste system between 2018 and 2022?
+SELECT geography,
+       ROUND(MAX(CASE WHEN year=2018 THEN tonnes END),0) AS y2018,
+       ROUND(MAX(CASE WHEN year=2022 THEN tonnes END),0) AS y2022
+FROM plastics_model_clean
+WHERE source='All' 
+GROUP BY geography 
+ORDER BY y2022 DESC;
+</sql><current_tab id="5"/></tab_sql></sqlb_project>

@@ -1,0 +1,88 @@
+﻿"Cube Title","Product Id","CANSIM Id",URL,"Cube Notes","Archive Status",Frequency,"Start Reference Period","End Reference Period","Total number of dimensions"
+"Waste materials diverted, by type and by source, inactive","38100138",,"https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=3810013801",1;2;3;4;19;20,"ARCHIVED -  a cube publicly available but no longer being updated","Every 2 years","2018-01-01","2022-01-01","3",
+
+"Dimension ID","Dimension name","Dimension Notes","Dimension Definitions"
+"1","Geography",,""
+"2","Type of materials diverted",,""
+"3","Sources of materials prepared for recycling",,""
+
+"Dimension ID","Member Name","Classification Code","Member ID","Parent Member ID",Terminated,"Member Notes","Member Definitions"
+"1","Newfoundland and Labrador","[10]","2","1","",,
+"1","Prince Edward Island","[11]","3","1","",,
+"1","Nova Scotia","[12]","4","1","",,
+"1","New Brunswick","[13]","5","1","",,
+"1","Quebec","[24]","6","1","",5,
+"1","Ontario","[35]","7","1","",,
+"1","Manitoba","[46]","8","1","",,
+"1","Saskatchewan","[47]","9","1","",,
+"1","Alberta","[48]","10","1","",,
+"1","British Columbia","[59]","11","1","",,
+"1","Yukon, Northwest Territories and Nunavut","[6]","12","1","",,
+"1","Canada","[11124]","1","","",,
+"2","All paper fibres","","2","1","",6,
+"2","Glass","","3","1","",,
+"2","Ferrous metals","","4","1","",,
+"2","Copper and aluminum","","5","1","",,
+"2","Mixed metals","","6","1","",,
+"2","White goods","","7","1","",,
+"2","Electronics","","8","1","",7,
+"2","Plastics","","9","1","",,
+"2","Gable top and aseptic containers","","10","1","",9,
+"2","Textiles","","11","1","",10,
+"2","Tires","","12","1","",11,
+"2","Construction, renovation and demolition","","13","1","",,
+"2","All organic materials","","14","1","",,
+"2","Other materials","","15","1","",12,
+"2","Food waste and source separated organics","","16","14","",16,
+"2","Leaf and yard waste","","17","14","",17,
+"2","Other organic materials","","18","14","",18,
+"2","All materials diverted","","1","","",13,
+"3","Residential sources of diverted materials","","2","1","",14,
+"3","Non-residential sources of diverted materials","","3","1","",15,
+"3","All sources of diverted materials","","1","","",,
+
+Symbol Legend
+Description,Symbol
+"not available for a specific reference period","..",
+"less than the limit of detection","<LOD",
+"value rounded to 0 (zero) where there is a meaningful distinction between true zero and the value that was rounded","0s",
+"data quality: excellent","A",
+"data quality: very good","B",
+"data quality: good","C",
+"data quality: acceptable","D",
+"use with caution","E",
+"too unreliable to be published","F",
+"not applicable","...",
+"preliminary","p",
+"revised","r",
+"suppressed to meet the confidentiality requirements of the Statistics Act","x",
+"terminated","t",
+
+"Survey Code","Survey Name"
+"2009","Biennial Waste Management Survey"
+
+"Subject Code","Subject Name"
+"38","Environment"
+
+"Note ID",Note
+1,"This information covers only those companies and local waste management organizations that reported non-hazardous recyclable material preparation activities and refers only to that material entering the waste stream and does not cover any waste that may be managed on-site by a company or household. Additionally, these data do not include those materials transported by the generator directly to secondary processors, such as pulp and paper mills, while bypassing entirely any firm or local government involved in waste management activities."
+2,"This table replaces and combines information published in tables 38-10-0033 and 38-10-0034 prior to 2018."
+3,"Source: Statistics Canada, Environment Accounts and Statistics Division."
+4,"Revisions are made for the previous survey reference period, with the initial release of the current data, as required."
+5,"Prior to 2022, waste diversion data for Quebec was derived from RÉCYC-QUÉBEC. Note that the amount of white goods reported by RÉCYC-QUÉBEC is disproportionately larger than that reported by other provincial and territorial jurisdictions. The definition of white goods and the collection methodology used by RÉCYC-QUÉBEC for this category of material differs from that of Statistics Canada's Waste Management Survey, resulting in a discrepancy. The RECYC-QUÉBEC data for 2022 were not available. The waste diversion data for Québec were estimated using collected data from the 2022 Waste Management Survey and imputation using historical RECYC-QUÉBEC data."
+6,"Includes "Newsprint", "Cardboard and boxboard", and "Mixed paper"."
+7,"Provincial tonnages of diverted Electronics were taken from the Electronic Products Recycling Association (EPRA), Alberta Recycling Management Authority (ARMA), survey data and other sources."
+9,"Prior to 2018, "Gable top and aseptic containers" were included with "Other Materials"."
+10,"Prior to 2018, "Textiles" may have been included in "Other Materials", however respondents were not asked specifically to report this material."
+11,"Provincial tonnages of diverted tires were taken from the Canadian Association of Tire Recycling Agencies (CATRA) and survey data."
+12,""Other Materials" includes non-hazardous materials that were reported as diverted but were not included in any of the specified categories.  Prior to 2018, this category included "Gable top and aseptic containers" and "Textiles"."
+13,"Residential and non-residential splits are not available at the total level, as electronic and tire source data are unavailable."
+14,"Residential non-hazardous recyclable materials include solid non-hazardous materials produced in all residences and include non-hazardous materials that are picked up by the municipality (either using its own staff or through contracting firms) and non-hazardous materials from residential sources that are self-hauled to depots, transfer stations and disposal facilities."
+15,"Non-residential sources include solid non-hazardous recyclable material from the Industrial, Commercial, and Institutional (IC and I) sector as well as the Construction, Renovation and Demolition sector (CRD). Materials are those generated by all IC and I and CRD sources in a municipality, and are excluded from the residential waste stream."
+16,"Source separation of organics is the setting aside of organic waste materials at their point of generation (the home, office, or other place of business) by the generator."
+17,"Leaf and yard waste include any waste collected from a yard or garden such as leaves, grass clippings, plants, tree trimmings and branches."
+18,""Other organic materials" includes non-hazardous organic materials that were reported as composted but were not included in any of the specified categories. It also includes forestry, wood, and agricultural waste."
+19,"The Waste Management Survey data presented here accounts for material brought to sorting or processing facilities. As some of this material is deemed unrecyclable during sorting, not all of it ends up being recycled or composted."
+20,"This table was replaced by table 38100179."
+
+"Correction ID","Correction Date","Correction Note"
