@@ -3,6 +3,14 @@
 
 All figures in this report come from official Canadian sources. Full citations are in `data/SOURCES.md`.
 
+## Visuals
+
+![Plastic diversion has been essentially flat](images/02-1.png)
+
+![Three provinces hold 79% of what is diverted](images/02-2.png)
+
+![Most diverted plastic comes from households](images/02-3.png)
+
 ## Executive summary
 Canada has set a target of eliminating plastic waste by 2030, but the available data indicates the country is not on course to meet it. About 9% of Canada's plastic is recycled, and the amount of plastic diverted for recycling changed very little between 2018 and 2022. Environment and Climate Change Canada estimates that the plastic Canada does not recover is worth roughly $8 billion a year. When the national figure is broken down by province, two patterns are clear: most of the plastic that is diverted comes from household collection rather than from businesses, and a small number of provinces account for the large majority of the national total. Those are the two areas where any meaningful improvement would have to come from.
 
